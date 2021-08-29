@@ -6,3 +6,6 @@ class Posts(models.Model):
     date = models.DateTimeField(auto_now=False, auto_now_add=False)
     text = models.TextField()
     image = models.ImageField(upload_to='blog_images/')
+
+    def __str__(self):
+        return self.title
